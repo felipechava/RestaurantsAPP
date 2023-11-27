@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RESERVA DE LOCALES</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- Botones -->
+  <div id="contenedorBotones">
+    <h1>Reserva de Locales</h1>
+
+    <input type="button" value="Iniciar Sesion" id="a">
+    <input type="button" value="Registrarse" id="b">
+  </div>
+
+  <!-- Iniciar Sesión -->
+  <div id="contenedorIniciarSesion" style="display: none;">
+    <h2>Iniciar Sesión</h2><br><br><br><br>
+
+    <label for="txtUsuarioInicioSesion">Usuario</label>
+    <input type="text" id="txtUsuarioInicioSesion" placeholder="Ingresar Usuario" />
+
+    </br><br>
+
+    <label for="txtContraseñaInicioSesion">Contraseña</label>
+    <input type="password" id="txtContraseñaInicioSesion" placeholder="Ingresar Contraseña">
+
+    </br><br>
+
+    <button id="btnIngresar">Ingresar</button>
+    <p id="pIniciarSesion"></p>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Contraseña</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>local1</td>
+          <td>Local1</td>
+          <td>Restaurant</td>
+        </tr>
+        <tr>
+          <td>local2</td>
+          <td>Local2</td>
+          <td>Restaurant</td>
+        </tr>
+        <tr>
+          <td>local3</td>
+          <td>Local3</td>
+          <td>Restaurant</td>
+        </tr>
+        <tr>
+          <td>local4</td>
+          <td>Local4</td>
+          <td>Museo</td>
+        </tr>
+        <tr>
+          <td>local5</td>
+          <td>Local5</td>
+          <td>Museo</td>
+        </tr>
+        <tr>
+          <td>local6</td>
+          <td>Local6</td>
+          <td>Teatro</td>
+        </tr>
+        <tr>
+          <td>local7</td>
+          <td>Local7</td>
+          <td>Teatro</td>
+        </tr>
+        <tr>
+          <td>usuario1</td>
+          <td>Usuario1</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario2</td>
+          <td>Usuario2</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario3</td>
+          <td>Usuario3</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario4</td>
+          <td>Usuario4</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario5</td>
+          <td>Usuario5</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario6</td>
+          <td>Usuario6</td>
+          <td>Usuario</td>
+        </tr>
+        <tr>
+          <td>usuario7</td>
+          <td>Usuario7</td>
+          <td>Usuario</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <!-- Registrarse -->
+  <div id="contenedorRegistrarse" style="display: none;">
+    <h2>Registrarse</h2><br><br><br><br>
+
+    <label for="txtNombre">Nombre</label>
+    <input type="text" id="txtNombre" placeholder="Ingresar Nombre">
+
+    </br><br>
+
+    <label for="txtUsuario">Usuario</label>
+    <input type="text" id="txtUsuario" placeholder="Ingresar Usuario">
+
+    </br><br>
+
+    <label for="txtContraseña">Contraseña</label>
+    <input type="password" id="txtContraseña" placeholder="Ingresar Contraseña">
+
+    </br><br>
+
+    <button id="btnRegistrarse">Registrar</button>
+    <p id="pRegistrarse"></p>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <div id="contenedor" style="display: none">
+
+    <div id="cabezal" class="clearfix">
+      <img id="logo"
+        src="https://media.istockphoto.com/vectors/blue-button-reserve-on-white-backdrop-vector-graphic-online-order-vector-id1369392619?k=20&m=1369392619&s=612x612&w=0&h=P12bHat_mXf7obh1M6tJa-3-CIuwchkIFqR2THcq5WE="
+        alt="logo">
+      <ul id="navPrincipal">
+        <li id="btnSeccionRealizarReserva" class="btnSeccion">
+          <a>Realizar Reserva</a>
+        </li>
+        <li id="btnSeccionVerReservas" class="btnSeccion">
+          <a>Ver Reservas</a>
+        </li>
+        <li id="btnSeccionVerEstadisticas" class="btnSeccion">
+          <a>Ver Estadisticas</a>
+        </li>
+      </ul>
+
+      <!-- AUXILIARES -->
+      <div id="aux">
+        <a id="nombreUsuarioLogueado" class="btnSeccion"></a> | <a id="btnCerrarSesion">Cerrar Sesión</a>
+      </div>
+    </div>
+
+    <!-- CENTRO PÁGINA  -->
+    <div id="contenido">
+
+      <div id="seccionBienvenida" class="seccion">
+        <h3>¡Bienvenido/a!</h3>
+        <p id="pBienvenida"></p>
+      </div>
+
+      <!-- Perfil Local -->
+      <div id="seccionPerfilLocal" class="seccion">
+        <label for="slcVisualizarEstado">¿El local está habilitado?</label>
+        <select id="slcVisualizarEstado">
+          <option value="s">Si</option>
+          <option value="n">No</option>
+        </select><br><br>
+
+        <label for="txtCupoMaximo">Cupo Máximo:</label>
+        <input type="text" id="txtCupoMaximo"><br><br>
+        <input type="button" value="Guardar Cambios" id="btnGuardarPerfilLocal">
+        <p id="pPerfilLocalGuardarCambios"></p>
+      </div>
+
+      <!-- Realizar Reserva -->
+      <div id="seccionRealizarReserva" class="seccion">
+        <h3>Realizar Reserva</h3>
+        <hr><br>
+
+        <label for="slcDistintosLocales">Seleccionar local:</label>
+        <select id="slcDistintosLocales">
+          <option value="...">...</option>
+        </select>
+
+        <br><br>
+
+        <p id="txtDireccionLocal"></p>
+
+        <p id="txtPuntajeLocal"></p>
+
+        <img id="imgLocal">
+
+        <br><br>
+
+        <label for="txtCupoReserva">¿Cuantas personas son?:</label>
+        <input type="text" id="txtCupoReserva"><br><br>
+
+        <input type="button" value="Reservar" id="btnReservarCupo">
+
+        <p id="pRealizarReserva"></p>
+      </div>
+
+      <div id="seccionModificarReserva" class="seccion">
+        <h3>Modificar Reserva</h3>
+        <hr>
+
+        <hr>
+      </div>
+
+      <!-- Ver Reservas Local -->
+      <div id="seccionVerReservas" class="seccion">
+        <h3>Reservas</h3>
+        <div>
+          <div id="buscador">
+            <label for="txtBusqueda">Busqueda:</label>
+            <input type="text" id="txtBusqueda">
+            <input type="button" id="btnBuscar" value="Buscar">
+            <p id="pReservasLocal"></p>
+          </div>
+
+          <table border="1">
+            <thead>
+              <tr>
+                <th id="txtColumnaNombre"></th>
+                <th>Cupos</th>
+                <th>Estado</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="tblReservas">
+            </tbody>
+          </table>
+          <hr>
+        </div>
+      </div>
+
+      <!-- Puntuar Reserva -->
+      <div id="seccionPuntuarReserva" class="seccion">
+        <h3>Puntuar Reserva</h3>
+
+        <p id="txtNombreLocalAPuntuar"></p>
+
+        <label for="slcPuntaje">Puntaje:</label>
+        <select id="slcPuntaje">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+
+        <br><br>
+
+        <input type="button" id="btnPuntuarReserva" value="Guardar Puntaje">
+
+        <hr>
+      </div>
+
+      <!-- Estadísticas Local -->
+      <div id="seccionEstadisticasLocal" class="seccion">
+        <h3>Estadísticas</h3>
+
+        <h5>Porcentaje de ocupacion: </h5>
+        <p id="txtPorcentajeOcupacion"></p>
+
+        <h5>Promedio de calificacion: </h5>
+        <p id="txtPromedioCalificacion"></p>
+
+        <h5>Total de reservas: </h5>
+        <p id="txtTotalReservas"></p>
+
+        <h5>Total de reservas pendientes: </h5>
+        <p id="txtTotalReservasPendientes"></p>
+
+        <h5>Total de reservas finalizadas: </h5>
+        <p id="txtTotalReservasFinalizadas"></p>
+
+        <h5>Total de reservas canceladas: </h5>
+        <p id="txtTotalReservasCanceladas"></p>
+
+        <hr>
+      </div>
+
+      <!-- Estadísticas Cliente -->
+      <div id="seccionEstadisticasCliente" class="seccion">
+        <h3>Estadísticas</h3>
+
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Local</th>
+              <th>Tus Reservas Completadas</th>
+              <th>Tus Reservas en el Local</th>
+              <th>Reservas totales del Local</th>
+              <th>Tu % de Reservas en el Local </th>
+            </tr>
+          </thead>
+          <tbody id="tblEstadisticasCliente">
+          </tbody>
+        </table>
+
+        <h3>Locales más Reservados</h3>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Nombre Local</th>
+              <th>Cantidad Reservas</th>
+            </tr>
+          </thead>
+          <tbody id="tblLocalesMasReservados">
+          </tbody>
+        </table>
+
+        <hr>
+      </div>
+
+
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <div id="pie">
+      <!-- <a href="https://www.ort.edu.uy">Página de la facultad</a> -->
+      <p>BY: FELIPE CHAVARRÍA</p>
+    </div>
+
+  </div>
+
+  <script src="js/codigos.js"></script>
+</body>
+
+</html>
